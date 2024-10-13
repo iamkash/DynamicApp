@@ -13,10 +13,11 @@
         "icon": "FaUserAlt" 
       },
       { 
-        "name": "Cart", 
-        "href": "/cart", 
-        "icon": "FaShoppingCart" 
+        "name": "Notifications", 
+        "href": "/login", 
+        "icon": "FaBell" 
       }
+      
     ],
     "themeIcons": {
       "light": "FaSun",
