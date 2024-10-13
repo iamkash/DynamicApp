@@ -12,7 +12,7 @@ const Workspace = ({ workspaceId }) => {
   useEffect(() => {
     const fetchWorkspaces = async () => {
       try {
-        const response = await fetch('/data/workspaces.json');
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/workspaces.json`);
         const data = await response.json();
         setWorkspaces(data.workspaces);
       } catch (error) {
@@ -27,7 +27,7 @@ const Workspace = ({ workspaceId }) => {
   useEffect(() => {
     const fetchWorkspaceData = async () => {
       try {
-        const response = await fetch(`/data/workspaces/${workspaceId}.json`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/workspaces/${workspaceId}.json`);
         const data = await response.json();
         setWorkspaceData(data);
       } catch (error) {

@@ -32,7 +32,7 @@ const LeftNav = ({ isOpen, toggleNav }) => {
   useEffect(() => {
     const fetchWorkspaces = async () => {
       try {
-        const response = await fetch(`/data/workspaces.json`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/workspaces.json`);
         const data = await response.json();
         const organizedWorkspaces = organizeWorkspaces(data.workspaces);
         setWorkspaceTree(organizedWorkspaces);

@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const fetchWorkspaces = async () => {
       try {
-        const response = await fetch(`/data/workspaces.json`); // Fetch workspaces
+        const response = await fetch(`${process.env.PUBLIC_URL}//data/workspaces.json`); // Fetch workspaces
         const data = await response.json();
         setWorkspaces(data.workspaces);
       } catch (error) {
