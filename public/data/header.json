@@ -1,0 +1,27 @@
+{
+    "logoText": "",
+    "navLinks": [
+      { "name": "Home", "href": "/" },
+      { "name": "About", "href": "/about" },
+      { "name": "Services", "href": "/services" },
+      { "name": "Contact", "href": "/contact" }
+    ],
+    "utilityLinks": [
+      { 
+        "name": "Login", 
+        "href": "/login", 
+        "icon": "FaUserAlt" 
+      },
+      { 
+        "name": "Cart", 
+        "href": "/cart", 
+        "icon": "FaShoppingCart" 
+      }
+    ],
+    "themeIcons": {
+      "light": "FaSun",
+      "dark": "FaMoon"
+    },
+    "showFullscreenToggle": true
+  }
+  

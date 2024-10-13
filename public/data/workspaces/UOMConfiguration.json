@@ -1,0 +1,294 @@
+{
+  "id": "workspace1",
+  "name": "Development Workspace",
+  "path": "/dashboard",
+  "icon": "FaChartPie",
+  "gadgets": [
+    {
+      "name": "formGadget1",
+      "title": "User Registration",
+      "icon": "FaUser",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "gadgetType": "form",
+      "gadgetOptions": [
+        {
+          "type": "input",
+          "label": "Full Name",
+          "name": "fullName",
+          "id": "fullName",
+          "inputType": "text"
+        },
+        {
+          "type": "input",
+          "label": "Email",
+          "name": "email",
+          "id": "email",
+          "inputType": "email"
+        },
+        {
+          "type": "radio",
+          "label": "Gender",
+          "name": "gender",
+          "id": "gender",
+          "options": [
+            { "label": "Male", "value": "male" },
+            { "label": "Female", "value": "female" }
+          ]
+        }
+      ],
+      "footer": "Please complete the form"
+    },
+    {
+      "name": "gridGadget1",
+      "title": "User Data",
+      "icon": "FaTable",
+      "height": "100%",
+      "colSpan": "col-span-8",
+      "header": "User Information",
+      "gadgetType": "grid",
+      "gadgetOptions": {
+        "columns": [
+          { "header": "Name", "field": "name", "type": "text" },
+          { "header": "Age", "field": "age", "type": "number" },
+          { "header": "Email", "field": "email", "type": "text" }
+        ],
+        "data": [
+          { "name": "John Doe", "age": 30, "email": "john@example.com" }
+         
+        ]
+      },
+      "footer": "Last updated 1 day ago"
+    },
+    {
+      "name": "areaChart",
+      "title": "Area Chart",
+      "icon": "FaChartArea",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Area Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Area",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Area Chart Example"
+    },
+    {
+      "name": "autoChart",
+      "title": "Auto Chart",
+      "icon": "FaChartAuto",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Auto Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Auto",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Auto Chart Example"
+    },
+    {
+      "name": "columnChart",
+      "title": "Column Chart",
+      "icon": "FaChartColumn",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Column Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Column",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Column Chart Example"
+    },
+    {
+      "name": "lineChart",
+      "title": "Line Chart",
+      "icon": "FaChartLine",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Line Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Line",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Line Chart Example"
+    },
+    {
+      "name": "pointChart",
+      "title": "Point Chart",
+      "icon": "FaChartPoint",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Point Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Point",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Point Chart Example"
+    },
+    {
+      "name": "splineChart",
+      "title": "Spline Chart",
+      "icon": "FaChartSpline",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Spline Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Spline",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Spline Chart Example"
+    },
+    {
+      "name": "splineAreaChart",
+      "title": "Spline Area Chart",
+      "icon": "FaChartSplineArea",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Spline Area Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "SplineArea",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Spline Area Chart Example"
+    },
+    {
+      "name": "stepAreaChart",
+      "title": "Step Area Chart",
+      "icon": "FaChartStepArea",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Step Area Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "StepArea",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Step Area Chart Example"
+    },
+    {
+      "name": "stepLineChart",
+      "title": "Step Line Chart",
+      "icon": "FaChartStepLine",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Step Line Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "StepLine",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Step Line Chart Example"
+    },
+    {
+      "name": "waterfallChart",
+      "title": "Waterfall Chart",
+      "icon": "FaChartWaterfall",
+      "height": "100%",
+      "colSpan": "col-span-4",
+      "header": "Waterfall Chart Example",
+      "gadgetType": "chart",
+      "gadgetOptions": {
+        "chartType": "Waterfall",
+        "data": [
+          { "month": "January", "sales": 100 },
+          { "month": "February", "sales": 200 },
+          { "month": "March", "sales": 150 },
+          { "month": "April", "sales": 250 }
+        ],
+        "xAxisTitle": "Month",
+        "yAxisTitle": "Sales",
+        "xAxisField": "month",
+        "yAxisField": "sales"
+      },
+      "footer": "Waterfall Chart Example"
+    }
+  ]
+}
