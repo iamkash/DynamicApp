@@ -1,0 +1,19 @@
+{
+    "id": "myProjects",
+    "name": "My Projects",
+    "path": "/myProjects",
+    "icon": "FaFolder",
+    "gadgets": [
+      
+      {
+        "name": "gadget5",
+        "title": "User Statistics",
+        "icon": "FaUser",
+        "height": "100%",
+        "colSpan": "col-span-6",
+        "header": "Users",
+        "footer": "Last updated 1 hour ago"
+      }
+    ]
+  }
+  

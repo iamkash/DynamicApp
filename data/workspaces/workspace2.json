@@ -1,0 +1,10 @@
+{
+    "id": "workspace2",
+    "name": "Design Workspace",
+    "description": "This workspace focuses on design-related tasks.",
+    "items": [
+      { "name": "Task 1", "details": "Create wireframes for the new website." },
+      { "name": "Task 2", "details": "Design the user flow diagrams." }
+    ]
+  }
+  

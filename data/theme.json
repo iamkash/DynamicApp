@@ -1,0 +1,39 @@
+{
+    "themes": {
+      "light": {
+        "primaryColor": "#f8f8f8",
+        "backgroundColor": "#ffffff",
+        "secondaryColor": "#e2e2e2",
+        "interactiveColor": "#0071BC",
+        "errorColor": "#BF0000",
+        "secondaryBackgroundColor": "#B0BEC5",
+        "tertiaryColor": "#90A4AE",
+        "quaternaryColor": "#CFD8DC",
+        "darkBackground30": "#455A64",
+        "darkBackground20": "#37474F",
+        "darkBackground10": "#263238",
+        "textColorOnPrimary": "#222222",
+        "textColorOnSecondary": "#000000",
+        "linkColor": "#0071BC",
+        "fontFamily": "'Helvetica Neue', Arial, sans-serif"
+      },
+      "dark": {
+        "primaryColor": "#383838",
+        "backgroundColor": "#222222",
+        "secondaryColor": "#4e4e4e",
+        "interactiveColor": "#0071BC",
+        "errorColor": "#BF0000",
+        "secondaryBackgroundColor": "#B0BEC5",
+        "tertiaryColor": "#90A4AE",
+        "quaternaryColor": "#CFD8DC",
+        "darkBackground30": "#455A64",
+        "darkBackground20": "#37474F",
+        "darkBackground10": "#263238",
+        "textColorOnPrimary": "#FFFFFF",
+        "textColorOnSecondary": "#000000",
+        "linkColor": "#0071BC",
+        "fontFamily": "'Helvetica Neue', Arial, sans-serif"
+      }
+    }
+  }
+  

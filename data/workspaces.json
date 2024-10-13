@@ -1,0 +1,33 @@
+{
+    "workspaces": [
+      {
+        "id": "projects",
+        "name": "Projects",
+        "path": null,
+        "icon": "FaFolderOpen",
+        "parentId": null
+      },
+      {
+        "id": "myProjects",
+        "name": "My Projects",
+        "path": "/myprojects",
+        "icon": "FaFolder",
+        "parentId": "projects"
+      },
+      {
+        "id": "SystemAdminstration",
+        "name": "System Adminstration",
+        "path": null,
+        "icon": "FaWrench",
+        "parentId": null
+      },
+      {
+        "id": "UOMConfiguration",
+        "name": "UOM Configuration",
+        "path": "/UOMConfiguration",
+        "icon": "FaThermometerQuarter",
+        "parentId": "SystemAdminstration"
+      }
+    ]
+  }
+  
