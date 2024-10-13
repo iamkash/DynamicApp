@@ -1,7 +1,7 @@
 // Fetch the theme settings from the JSON file
 export const fetchThemeSettings = async () => {
     try {
-      const response = await fetch('/data/theme.json');
+      const response = await fetch(`${process.env.PUBLIC_URL}/data/theme.json`);
       if (!response.ok) {
         throw new Error('Failed to fetch theme settings');
       }

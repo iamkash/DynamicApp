@@ -16,7 +16,7 @@ const Header = ({ toggleTheme, currentTheme, toggleNav }) => {
   };
 
   useEffect(() => {
-    fetch('/data/header.json')
+    fetch(`${process.env.PUBLIC_URL}/data/header.json`)
       .then((response) => response.json())
       .then((data) => {
         setHeaderData(data);
@@ -64,10 +64,12 @@ const Header = ({ toggleTheme, currentTheme, toggleNav }) => {
 
     {/* Company Logo Image */}
     <img
-      src="/logo.png"  // Update this with the actual path to your company logo image
+      src={`${process.env.PUBLIC_URL}/logo.png`}  // Update this with the actual path to your company logo image
       alt="Company Logo"
       className="h-10 w-auto object-contain" // Adjust height and width as needed
     />
+
+    
 
     {/* Logo Text */}
     <div className = "text-xl" style={{ color: 'var(--textColorOnPrimary)' }}>{logoText}</div>
