@@ -8,10 +8,10 @@
         "parentId": null
       },
       {
-        "id": "myProjects",
-        "name": "My Projects",
-        "path": "/myprojects",
-        "icon": "FaFolder",
+        "id": "project-search",
+        "name": "Search Projects",
+        "path": "/project-search",
+        "icon": "FaSearch",
         "parentId": "projects"
       },
       {
