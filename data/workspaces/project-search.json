@@ -1,13 +1,13 @@
 {
     "id": "myProjects",
-    "name": "My Projects",
-    "path": "/myProjects",
-    "icon": "FaFolder",
+    "name": "Search Projects",
+    "path": "/project-search",
+    "icon": "FaSearch",
     "gadgets": [
       {
         "name": "myProjectsGadget",
-        "title": "My Projects",
-        "icon": "FaFolder",
+        "title": "Search Projects",
+        "icon": "FaSearch",
         "height": "100%",
         "colSpan": "col-span-12",       
         "gadgetType": "projects",
