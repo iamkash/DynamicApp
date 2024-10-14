@@ -58,7 +58,7 @@ function App() {
 
   return (
     <Router>
-      <div className="font-poppins min-h-screen" style={{ backgroundColor: 'var(--backgroundColor)', color: 'var(--textColorOnPrimary)' }}>
+      <div className="font-poppins min-h-screen" style={{ backgroundColor: 'var(--primaryBackground)', color: 'var(--primaryTextColor)' }}>
         {/* Header with theme and nav toggles */}
         <Header toggleTheme={toggleTheme} currentTheme={theme} toggleNav={toggleNav} />
 

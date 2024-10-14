@@ -64,37 +64,36 @@ const Workspace = ({ workspaceId }) => {
   const IconComponent = FaIcons[workspaceData.icon];
 
   return (
-    <div className="workspace p-0">
-      {/* Breadcrumbs with Icons, all in one line */}
-      <nav className="flex items-center mb-0">
-        {breadcrumbTrail.map((workspace, index) => {
-          const BreadcrumbIcon = FaIcons[workspace.icon];
-
-          return (
-            <span key={workspace.id} className="flex items-center">
-              {BreadcrumbIcon && <BreadcrumbIcon className="mr-2 text-xs" />}
-              {workspace.path ? (
-                <Link to={workspace.path} className="hover:underline text-xs">
-                  {workspace.name}
-                </Link>
-              ) : (
-                <span className="text-xs">{workspace.name}</span>
-              )}
-              {index < breadcrumbTrail.length - 1 && (
-                <span className="mx-2">/</span>
-              )}
-            </span>
-          );
-        })}
-      </nav>
-
-      {/* Render Gadgets */}
-      <div className="gadgets-grid grid grid-cols-12 gap-2">
-        {workspaceData.gadgets.map((gadget) => (
-          <Gadget key={gadget.name} gadget={gadget} />
-        ))}
-      </div>
+    <div className="workspace p-0" style={{ backgroundColor: 'var(--primaryBackground)', color: 'var(--primaryTextColor)' }}>
+    {/* Breadcrumbs with Icons, all in one line 
+    <nav className="flex items-center mb-0">
+      {breadcrumbTrail.map((workspace, index) => {
+        const BreadcrumbIcon = FaIcons[workspace.icon];
+  
+        return (
+          <span key={workspace.id} className="flex items-center">
+            {BreadcrumbIcon && <BreadcrumbIcon className="mr-2 text-xs" style={{ color: 'var(--primaryTextColor)' }} />}
+            {workspace.path ? (
+              <Link to={workspace.path} className="hover:underline text-xs" style={{ color: 'var(--accentTextColor)' }}>
+                {workspace.name}
+              </Link>
+            ) : (
+              <span className="text-xs" style={{ color: 'var(--primaryTextColor)' }}>{workspace.name}</span>
+            )}
+            {index < breadcrumbTrail.length - 1 && <span className="mx-2">/</span>}
+          </span>
+        );
+      })}
+    </nav>*/}
+  
+    {/* Render Gadgets */}
+    <div className="gadgets-grid grid grid-cols-12 gap-2">
+      {workspaceData.gadgets.map((gadget) => (
+        <Gadget key={gadget.name} gadget={gadget} />
+      ))}
     </div>
+  </div>
+  
   );
 };
 

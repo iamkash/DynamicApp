@@ -18,22 +18,19 @@ export const fetchThemeSettings = async () => {
     const currentTheme = themeSettings[theme];
   
     if (currentTheme) {
-      // Set CSS variables for custom colors and fonts
-      document.documentElement.style.setProperty('--primaryColor', currentTheme.primaryColor);
-      document.documentElement.style.setProperty('--secondaryColor', currentTheme.secondaryColor);
-      document.documentElement.style.setProperty('--interactiveColor', currentTheme.interactiveColor);
-      document.documentElement.style.setProperty('--errorColor', currentTheme.errorColor);
-      document.documentElement.style.setProperty('--backgroundColor', currentTheme.backgroundColor);
-      document.documentElement.style.setProperty('--secondaryBackgroundColor', currentTheme.secondaryBackgroundColor);
-      document.documentElement.style.setProperty('--tertiaryColor', currentTheme.tertiaryColor);
-      document.documentElement.style.setProperty('--quaternaryColor', currentTheme.quaternaryColor);
-      document.documentElement.style.setProperty('--darkBackground30', currentTheme.darkBackground30);
-      document.documentElement.style.setProperty('--darkBackground20', currentTheme.darkBackground20);
-      document.documentElement.style.setProperty('--darkBackground10', currentTheme.darkBackground10);
-      document.documentElement.style.setProperty('--textColorOnPrimary', currentTheme.textColorOnPrimary);
-      document.documentElement.style.setProperty('--textColorOnSecondary', currentTheme.textColorOnSecondary);
-      document.documentElement.style.setProperty('--linkColor', currentTheme.linkColor);
-      document.documentElement.style.setProperty('--fontFamily', currentTheme.fontFamily);
+      // Set CSS variables for custom background colors
+      document.documentElement.style.setProperty('--primaryBackground', currentTheme.primaryBackground);
+      document.documentElement.style.setProperty('--secondaryBackground', currentTheme.secondaryBackground);
+      document.documentElement.style.setProperty('--tertiaryBackground', currentTheme.tertiaryBackground);
+    
+      // Set CSS variables for custom text colors
+      document.documentElement.style.setProperty('--primaryTextColor', currentTheme.primaryTextColor);
+      document.documentElement.style.setProperty('--secondaryTextColor', currentTheme.secondaryTextColor);
+
+      // Set CSS variables for custom Highlight colors
+      document.documentElement.style.setProperty('--highlightBackgroundColor', currentTheme.highlightBackgroundColor);
+      document.documentElement.style.setProperty('--accentTextColor', currentTheme.accentTextColor);
     }
+    
   };
   

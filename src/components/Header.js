@@ -49,76 +49,86 @@ const Header = ({ toggleTheme, currentTheme, toggleNav }) => {
   const { logoText, utilityLinks, themeIcons, showFullscreenToggle } = headerData;
 
   return (
-    <header className="fixed top-0 w-full z-50 shadow-sm" style={{ backgroundColor: 'var(--primaryColor)' }}>
-      <div className="flex justify-between items-center w-full px-4 py-0">
-  {/* Left Group: Nav Toggle and Logo */}
-  <div className="flex items-center space-x-[10px]">
-    {/* Nav Toggle Button */}
-    <button
-      onClick={toggleNav}
-      className="p-1 rounded-md text-lg"
-      style={{ backgroundColor: 'var(--secondaryColor)', color: 'var(--textColorOnPrimary)' }}
-    >
-      <FaBars />
-    </button>
-
-    {/* Company Logo Image */}
-    <img
-      src={`${process.env.PUBLIC_URL}/logo.png`}  // Update this with the actual path to your company logo image
-      alt="Company Logo"
-      className="h-10 w-auto object-contain" // Adjust height and width as needed
-    />
-
-    
-
-    {/* Logo Text */}
-    <div className = "text-xl" style={{ color: 'var(--textColorOnPrimary)' }}>{logoText}</div>
-  </div>
-
-  {/* Right Group: Theme Selector and Other Links */}
-  <div className="flex items-center space-x-4">
-    {/* Utility Links or Theme Selector */}
-    {utilityLinks.map((utility, index) => {
-      const IconComponent = icons[utility.icon];
-      return IconComponent ? (
-        <a key={index} href={utility.href} style={{ color: 'var(--textColorOnPrimary)' }} className="text-lg">
-          <IconComponent className="inline-block" />
-        </a>
-      ) : null;
-    })}
-
-    {/* Theme Toggle Button */}
-    <button
-      onClick={toggleTheme}
-      className="p-1 rounded-md text-lg transition duration-300"
-      style={{
-        backgroundColor: 'var(--secondaryColor)',
-        color: 'var(--textColorOnPrimary)',
-      }}
-    >
-      {currentTheme === 'light' && icons[themeIcons.light]
-        ? React.createElement(icons[themeIcons.light])
-        : currentTheme === 'dark' && icons[themeIcons.dark]
-        ? React.createElement(icons[themeIcons.dark])
-        : null}
-    </button>
-
-    {/* Fullscreen Toggle Button */}
-    {showFullscreenToggle && (
+<header className="fixed top-0 w-full z-50 shadow-sm" style={{ backgroundColor: 'var(--secondaryBackground)' }}>
+  <div className="flex justify-between items-center w-full px-4 py-0">
+    {/* Left Group: Nav Toggle and Logo */}
+    <div className="flex items-center space-x-[10px]">
+      {/* Nav Toggle Button */}
       <button
-        onClick={toggleFullscreen}
-        className="p-1 rounded-md text-lg transition duration-300"
-        style={{
-          backgroundColor: 'var(--secondaryColor)',
-          color: 'var(--textColorOnPrimary)',
+        onClick={toggleNav}
+        className="p-1 hover:text-blue-800"
+        style={{          
+          color: 'var(--primaryTextColor)'
         }}
+        
       >
-        {isFullscreen ? <FaCompress /> : <FaExpand />}
+        <FaBars />
       </button>
-    )}
+
+      {/* Company Logo Image */}
+      <img
+        src={`${process.env.PUBLIC_URL}/logo.png`}
+        alt="Company Logo"
+        className="h-10 w-auto object-contain"
+      />
+
+      {/* Logo Text */}
+      <div className="text-xl" style={{ color: 'var(--primaryTextColor)' }}>{logoText}</div>
+    </div>
+
+    {/* Right Group: Theme Selector and Other Links */}
+    <div className="flex items-center space-x-4">
+      {/* Utility Links or Theme Selector */}
+      {utilityLinks.map((utility, index) => {
+        const IconComponent = icons[utility.icon];
+        return IconComponent ? (
+          <a
+            key={index}
+            href={utility.href}
+            className="p-1 hover:text-blue-800"
+        style={{          
+          color: 'var(--primaryTextColor)'
+        }}
+          >
+            <IconComponent className="inline-block" />
+          </a>
+        ) : null;
+      })}
+
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className="p-1 hover:text-blue-800"
+        style={{          
+          color: 'var(--primaryTextColor)'
+        }}
+       
+      >
+        {currentTheme === 'light' && icons[themeIcons.light]
+          ? React.createElement(icons[themeIcons.light])
+          : currentTheme === 'dark' && icons[themeIcons.dark]
+          ? React.createElement(icons[themeIcons.dark])
+          : null}
+      </button>
+
+      {/* Fullscreen Toggle Button */}
+      {showFullscreenToggle && (
+        <button
+          onClick={toggleFullscreen}
+          className="p-1 hover:text-blue-800"
+        style={{          
+          color: 'var(--primaryTextColor)'
+        }}
+        >
+          {isFullscreen ? <FaCompress /> : <FaExpand />}
+        </button>
+      )}
+    </div>
   </div>
-</div>
-    </header>
+</header>
+
+  
+
   );
 };
 

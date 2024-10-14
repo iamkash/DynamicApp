@@ -108,23 +108,24 @@ const LeftNav = ({ isOpen, toggleNav }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-64 z-40 shadow-sm transform transition-transform duration-300 left-nav-content ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}
-      style={{
-        backgroundColor: 'var(--primaryColor)',  // Dynamic background color
-        color: 'var(--textColorOnPrimary)',  // Dynamic text color
-      }}
-    >
-      <nav className="flex flex-col space-y-2  p-2 text-sm">
-        {/* Dynamic Workspace Links */}
-        <div>
-          <ul className="space-y-2">
-            {renderWorkspaces(workspaceTree)}
-          </ul>
-        </div>
-      </nav>
-    </div>
+    className={`fixed top-0 left-0 h-full w-64 z-40 shadow-sm transform transition-transform duration-300 left-nav-content ${
+      isOpen ? 'translate-x-0' : '-translate-x-full'
+    }`}
+    style={{
+      backgroundColor: 'var(--secondaryBackground)',  // Dynamic primary background color
+      color: 'var(--primaryTextColor)',  // Dynamic primary text color
+    }}
+  >
+    <nav className="flex flex-col space-y-2 p-2 text-sm">
+      {/* Dynamic Workspace Links */}
+      <div>
+        <ul className="space-y-2">
+          {renderWorkspaces(workspaceTree)}
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
   );
 };
 

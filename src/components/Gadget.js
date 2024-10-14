@@ -20,36 +20,40 @@ const Gadget = ({ gadget }) => {
   };
 
   return (
-    <div ref={gadgetRef} 
-      className={`gadget-container shadow-lg p-2 mb-2 ${colSpan} flex flex-col justify-between`}  
-      style={{ backgroundColor: 'var(--primaryColor)', color: 'var(--textColorOnPrimary)', minHeight: height }}  
-    >
-     
-      {/* Header with gadget icon, title, and fullscreen icon */}
-      <div className="gadget-header flex items-center justify-between mb-1">
-        <div className="flex items-center">
-          {IconComponent && <IconComponent className="mr-1 text-sm" />}
-          <h2 className="text-sm font-bold">{title}</h2>
-        </div>
-        {/* Fullscreen Icon */}
-        <button onClick={toggleFullscreen} className="text-sm hover:text-blue-500">
-          <FaIcons.FaExpand className="inline-block text-lg" />
-        </button>
+    <div 
+    ref={gadgetRef} 
+    className={`gadget-container shadow-lg p-2 mb-2 ${colSpan} flex flex-col justify-between`}  
+    style={{ 
+      backgroundColor: 'var(--secondaryBackground)', 
+      color: 'var(--primaryTextColor)', 
+      minHeight: height 
+    }}  
+  >
+    {/* Header with gadget icon, title, and fullscreen icon */}
+    <div className="gadget-header flex items-center justify-between mb-1">
+      <div className="flex items-center">
+        {IconComponent && <IconComponent className="mr-1 text-sm" />}
+        <h2 className="text-sm font-bold">{title}</h2>
       </div>
-
-      {/* Gadget Body */}
-      <div className="gadget-body" style={{ height: height, overflowY: 'auto' }}>
-        <Suspense fallback={<div>Loading...</div>}>
-        {GadgetComponent ? <GadgetComponent elements={gadgetOptions} /> : <p>{gadgetOptions}</p>}
-         
-        </Suspense>
-      </div>
-
-      {/* Gadget Footer */}
-      <div className="gadget-footer text-[9px] mt-auto">
-        {footer}
-      </div>
+      {/* Fullscreen Icon */}
+      <button onClick={toggleFullscreen} className="text-sm hover:text-accentTextColor">
+        <FaIcons.FaExpand className="inline-block text-lg" />
+      </button>
     </div>
+  
+    {/* Gadget Body */}
+    <div className="gadget-body" style={{ height: height, overflowY: 'auto' }}>
+      <Suspense fallback={<div>Loading...</div>}>
+        {GadgetComponent ? <GadgetComponent elements={gadgetOptions} /> : <p>{gadgetOptions}</p>}
+      </Suspense>
+    </div>
+  
+    {/* Gadget Footer */}
+    <div className="gadget-footer text-[9px] mt-auto" style={{ color: 'var(--secondaryTextColor)' }}>
+      {footer}
+    </div>
+  </div>
+  
   );
 };
 
