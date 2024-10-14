@@ -4,16 +4,16 @@
     "path": "/myProjects",
     "icon": "FaFolder",
     "gadgets": [
-      
       {
-        "name": "gadget5",
-        "title": "User Statistics",
-        "icon": "FaUser",
+        "name": "myProjectsGadget",
+        "title": "My Projects",
+        "icon": "FaFolder",
         "height": "100%",
-        "colSpan": "col-span-6",
-        "header": "Users",
-        "footer": "Last updated 1 hour ago"
+        "colSpan": "col-span-12",       
+        "gadgetType": "projects",
+        "footer": ""
       }
     ]
   }
+
   

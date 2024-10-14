@@ -1,0 +1,17 @@
+{
+    "id": "project-new",
+    "name": "New Project",
+    "path": "/project-new",
+    "icon": "FaPlus",
+    "gadgets": [
+      {
+        "name": "newProjectGadget",
+        "title": "Create a new Project",
+        "icon": "FaPlus",
+        "height": "100%",
+        "colSpan": "col-span-12",       
+        "gadgetType": "",
+        "footer": ""
+      }
+    ]
+  }

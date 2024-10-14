@@ -15,6 +15,20 @@
         "parentId": "projects"
       },
       {
+        "id": "project-home",
+        "name": "Project Home",
+        "path": "/project-home",
+        "icon": "FaFolder",
+        "parentId": "projects"
+      },
+      {
+        "id": "project-new",
+        "name": "New Project",
+        "path": "/project-new",
+        "icon": "FaPlus",
+        "parentId": "projects"
+      },
+      {
         "id": "SystemAdminstration",
         "name": "System Adminstration",
         "path": null,
