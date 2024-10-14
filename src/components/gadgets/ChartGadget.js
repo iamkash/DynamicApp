@@ -30,6 +30,8 @@ const ChartGadget = ({ elements }) => {
   isVerticalZoomEnabled={true}
   height="100%"
   width="100%"
+  brushes={['#1ABB9C']}
+  outlines={['#1ABB9C']} 
   style={{
     backgroundColor: 'var(--primaryColor)',
     color: 'var(--textColor)',
