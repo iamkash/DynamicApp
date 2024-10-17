@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdynamicapp=self.webpackChunkdynamicapp||[]).push([[575],{78575:(e,a,l)=>{l.r(a),l.d(a,{default:()=>c});l(65043);var s=l(13204),t=l(70579);const c=e=>{let{gadget:a={}}=e;const{title:l,value:c,icon:n,link:u,uom:i}=a;s[n]||s.FaQuestionCircle;return(0,t.jsx)("div",{className:"w-full"})}}}]);
+//# sourceMappingURL=575.7557d621.chunk.js.map
