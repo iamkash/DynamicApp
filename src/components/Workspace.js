@@ -87,9 +87,11 @@ const Workspace = ({ workspaceId }) => {
     </nav>*/}
   
     {/* Render Gadgets */}
+
+
     <div className="gadgets-grid grid grid-cols-12 gap-2">
-      {workspaceData.gadgets.map((gadget) => (
-        <Gadget key={gadget.name} gadget={gadget} />
+      {workspaceData.gadgets.map((gadget, index) => (
+        <Gadget key={gadget.name} gadget={gadget} index={index} /> 
       ))}
     </div>
   </div>

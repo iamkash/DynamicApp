@@ -4,14 +4,42 @@
     "path": "/project-new",
     "icon": "FaPlus",
     "gadgets": [
-      {
-        "name": "newProjectGadget",
-        "title": "Create a new Project",
-        "icon": "FaPlus",
-        "height": "100%",
-        "colSpan": "col-span-12",       
-        "gadgetType": "",
-        "footer": ""
-      }
+        {
+            "name": "formGadget1",
+            "title": "New Project",
+            "icon": "FaUser",
+            "height": "100%",
+            "colSpan": "col-span-4",
+            "gadgetType": "form",
+            "gadgetOptions": {
+              "formElements": [
+              {
+                "type": "input",
+                "label": "Full Name",
+                "name": "fullName",
+                "id": "fullName",
+                "inputType": "text"
+              },
+              {
+                "type": "input",
+                "label": "Email",
+                "name": "email",
+                "id": "email",
+                "inputType": "email"
+              },
+              {
+                "type": "radio",
+                "label": "Gender",
+                "name": "gender",
+                "id": "gender",
+                "options": [
+                  { "label": "Male", "value": "male" },
+                  { "label": "Female", "value": "female" }
+                ]
+              }
+            ]
+          },
+            "footer": "Please complete the form"
+          }
     ]
   }

@@ -4,7 +4,7 @@ import { IgrCategoryChart, IgrCategoryChartModule } from 'igniteui-react-charts'
 // Register the Category Chart module
 IgrCategoryChartModule.register();
 
-const ChartGadget = ({ elements }) => {
+const ChartGadget = ({ gadget }) => {
     const {
       chartType = 'Column',  // Default to 'Column' chart if not provided
       data = [],
@@ -12,7 +12,7 @@ const ChartGadget = ({ elements }) => {
       yAxisTitle = 'Y Axis',
       xAxisField = '',
       yAxisField = ''
-    } = elements;
+    } = gadget;
 
 
 

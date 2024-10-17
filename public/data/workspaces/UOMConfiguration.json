@@ -11,7 +11,8 @@
       "height": "100%",
       "colSpan": "col-span-4",
       "gadgetType": "form",
-      "gadgetOptions": [
+      "gadgetOptions": {
+        "formElements": [
         {
           "type": "input",
           "label": "Full Name",
@@ -36,7 +37,8 @@
             { "label": "Female", "value": "female" }
           ]
         }
-      ],
+      ]
+    },
       "footer": "Please complete the form"
     },
     {
