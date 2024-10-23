@@ -1,33 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Gadget from './Gadget';
-import * as FaIcons from 'react-icons/fa';  // Dynamically load FontAwesome icons
 
 const Workspace = ({ workspaceId }) => {
   const [workspaceData, setWorkspaceData] = useState(null);
-  const [workspaces, setWorkspaces] = useState([]); // Store all workspaces to build breadcrumbs
-  const [breadcrumbTrail, setBreadcrumbTrail] = useState([]);
+  const [workspaces, setWorkspaces] = useState([]); // Not used here but kept for completeness
+  const [fullscreenGadget, setFullscreenGadget] = useState(null); // Track the fullscreen gadget
 
-  // Fetch the hierarchy and workspaces
-  useEffect(() => {
-    const fetchWorkspaces = async () => {
-      try {
-        const response = await fetch(`${process.env.PUBLIC_URL}/data/workspaces.json`);
-        const data = await response.json();
-        setWorkspaces(data.workspaces);
-      } catch (error) {
-        console.error('Error fetching workspaces data:', error);
-      }
-    };
+  // Access navigation state
+  const location = useLocation();
+  const { state } = location;
 
-    fetchWorkspaces();
-  }, []);
-
-  // Fetch the current workspace data dynamically based on workspaceId
   useEffect(() => {
     const fetchWorkspaceData = async () => {
       try {
-        const response = await fetch(`${process.env.PUBLIC_URL}/data/workspaces/${workspaceId}.json`);
+        const response = await fetch(
+          `${process.env.PUBLIC_URL}/data/workspaces/${workspaceId}.json`
+        );
         const data = await response.json();
         setWorkspaceData(data);
       } catch (error) {
@@ -38,64 +27,60 @@ const Workspace = ({ workspaceId }) => {
     fetchWorkspaceData();
   }, [workspaceId]);
 
-  // Build the breadcrumb trail based on hierarchy
-  useEffect(() => {
-    if (workspaces.length > 0 && workspaceData) {
-      const breadcrumbs = [];
-      let currentWorkspace = workspaces.find((ws) => ws.id === workspaceId);
-
-      // Traverse up the hierarchy to build the breadcrumbs
-      while (currentWorkspace) {
-        breadcrumbs.unshift(currentWorkspace);
-        currentWorkspace = currentWorkspace.parentId
-          ? workspaces.find((ws) => ws.id === currentWorkspace.parentId)
-          : null;
-      }
-
-      setBreadcrumbTrail(breadcrumbs);
-    }
-  }, [workspaceData, workspaces, workspaceId]);
-
   if (!workspaceData) {
     return <div>Loading workspace...</div>;
   }
 
-  // Load the icon dynamically from React Icons for the current workspace
-  const IconComponent = FaIcons[workspaceData.icon];
+  // Determine whether to show the banner
+  const showBanner = workspaceData.showBanner && state && state.task;
 
   return (
-    <div className="workspace p-0" style={{ backgroundColor: 'var(--primaryBackground)', color: 'var(--primaryTextColor)' }}>
-    {/* Breadcrumbs with Icons, all in one line 
-    <nav className="flex items-center mb-0">
-      {breadcrumbTrail.map((workspace, index) => {
-        const BreadcrumbIcon = FaIcons[workspace.icon];
-  
-        return (
-          <span key={workspace.id} className="flex items-center">
-            {BreadcrumbIcon && <BreadcrumbIcon className="mr-2 text-xs" style={{ color: 'var(--primaryTextColor)' }} />}
-            {workspace.path ? (
-              <Link to={workspace.path} className="hover:underline text-xs" style={{ color: 'var(--accentTextColor)' }}>
-                {workspace.name}
-              </Link>
-            ) : (
-              <span className="text-xs" style={{ color: 'var(--primaryTextColor)' }}>{workspace.name}</span>
-            )}
-            {index < breadcrumbTrail.length - 1 && <span className="mx-2">/</span>}
-          </span>
-        );
-      })}
-    </nav>*/}
-  
-    {/* Render Gadgets */}
+    <div
+      className="workspace p-0"
+      style={{ backgroundColor: 'var(--primaryBackground)', color: 'var(--primaryTextColor)' }}
+    >
+      {/* Display Banner if showBanner is true */}
+      {showBanner && (
+        <div className="banner bg-secondaryBackground p-2 text-xs mb-2">
+          {workspaceData.bannerFields.map(({ key, label }) => (
+            state.task[key] ? (
+              <p key={key}>
+                <strong>{label}:</strong> {state.task[key]}
+              </p>
+            ) : null
+          ))}
+        </div>
+      )}
 
-
-    <div className="gadgets-grid grid grid-cols-12 gap-2">
-      {workspaceData.gadgets.map((gadget, index) => (
-        <Gadget key={gadget.name} gadget={gadget} index={index} /> 
-      ))}
+      {/* Render Gadgets */}
+      <div
+        className={`gadgets-grid grid grid-cols-12 gap-2 items-start ${
+          fullscreenGadget ? 'fullscreen-mode' : ''
+        }`}
+      >
+        {workspaceData.gadgets.map((gadget, index) => (
+          <div
+            key={gadget.name}
+            className={`${
+              fullscreenGadget
+                ? fullscreenGadget === gadget.name
+                  ? 'col-span-12'
+                  : 'hidden'
+                : gadget.colSpan || 'col-span-6'
+            }`}
+          >
+            <Gadget
+              gadget={gadget}
+              index={index}
+              isFullscreen={fullscreenGadget === gadget.name}
+              toggleFullscreen={() =>
+                setFullscreenGadget(fullscreenGadget === gadget.name ? null : gadget.name)
+              }
+            />
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-  
   );
 };
 

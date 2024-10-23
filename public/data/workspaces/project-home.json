@@ -3,6 +3,11 @@
   "name": "Project",
   "path": "/project-home",
   "icon": "FaFolderOpen",
+  "showBanner": true,
+  "bannerFields": [
+    { "key": "projectName", "label": "Project Name" }
+    
+  ],
   "gadgets": [
     {
       "name": "tileGadget1",
@@ -95,17 +100,410 @@
       }
     },
     {
+      "name": "workflow",
+      "gadgetType": "quicklinks",
+      "title": "Workflows",
+      "icon": "FaSuperpowers",
+      "showHeader": true,
+      "showFooter": true,
+      "colSpan": "col-span-4",  
+      "height":"300px",
+      "gadgetOptions": {
+        "buttons": [
+          {
+            "link": "#",
+            "icon": "GiChemicalDrop",
+            "text": "PVT Calculator"
+          },
+          {
+            "link": "#",
+            "icon": "GiOilDrum",
+            "text": "Wellbore Calculator"
+          },
+          {
+            "link": "#",
+            "icon": "GiLayeredArmor",
+            "text": "Reservoir Simulator"
+          },
+          {
+            "link": "#",
+            "icon": "GiHistogram",
+            "text": "Numeric RTA"
+          },
+          {
+            "link": "#",
+            "icon": "GiPieChart",
+            "text": "Fractional RTA"
+          },
+          {
+            "link": "#",
+            "icon": "GiNestedHexagons",
+            "text": "Unconventional Numeric Model"
+          },
+          {
+            "link": "#",
+            "icon": "GiWaterDrop",
+            "text": "Inflow/Outflow"
+          },
+          {
+            "link": "#",
+            "icon": "GiWaterfall",
+            "text": "Flowing Material Model"
+          }
+        ]
+      }
+      
+  },
+    {
       "name": "mapGadget",
       "gadgetType": "map",
       "title": "Wells",
       "showHeader": true,
       "showFooter": true,
       "icon": "FaMap",
-      "colSpan": "col-span-4",  
+      "colSpan": "col-span-8",  
       "gadgetOptions": {
        "datasource": "/data/mock-data/well-map.json",
        "height":"300px"
     }
+  },
+  {
+    "name": "projectTeam",
+    "gadgetType": "listsearch",
+    "title": "Project Team Members",
+    "icon": "FaUsers",
+    "showHeader": true,
+    "showFooter": false,
+    "colSpan": "col-span-3",
+    "gadgetOptions": {
+      "searchPlaceholder": "Search Team Members...",
+      "itemKey": "id",
+      "valueMembers": ["fullName", "role", "department"],
+      "data": [
+        { "id": 1, "fullName": "Alice Johnson", "role": "Administrator", "department": "Management" },
+        { "id": 2, "fullName": "Bob Smith", "role": "Project Owner", "department": "Management" },
+        { "id": 3, "fullName": "Charlie Davis", "role": "Contributor", "department": "Drilling" },
+        { "id": 4, "fullName": "Diana Evans", "role": "Contributor", "department": "Drilling" },
+        { "id": 5, "fullName": "Ethan Harris", "role": "Contributor", "department": "Production" },
+        { "id": 6, "fullName": "Fiona Garcia", "role": "Contributor", "department": "Geology" },
+        { "id": 7, "fullName": "George Brown", "role": "Reviewer/Approver", "department": "Safety" },
+        { "id": 8, "fullName": "Hannah Wilson", "role": "Reviewer/Approver", "department": "Compliance" },
+        { "id": 9, "fullName": "Ian Thomas", "role": "Reviewer/Approver", "department": "Compliance" },
+        { "id": 10, "fullName": "Julia Martinez", "role": "Reviewer/Approver", "department": "Legal" },
+        { "id": 11, "fullName": "Kevin Lee", "role": "Read-Only User", "department": "Audit" },
+        { "id": 12, "fullName": "Laura Taylor", "role": "Read-Only User", "department": "Finance" },
+        { "id": 13, "fullName": "Michael Anderson", "role": "Read-Only User", "department": "HR" },
+        { "id": 14, "fullName": "Nina Rodriguez", "role": "Read-Only User", "department": "Environmental" },
+        { "id": 15, "fullName": "Oliver Clark", "role": "Read-Only User", "department": "Operations" },
+        { "id": 16, "fullName": "Paula Lewis", "role": "Contributor", "department": "Data Analysis" },
+        { "id": 17, "fullName": "Quentin Walker", "role": "Contributor", "department": "Maintenance" },
+        { "id": 18, "fullName": "Rachel Hall", "role": "Contributor", "department": "Safety" },
+        { "id": 19, "fullName": "Steven Allen", "role": "Contributor", "department": "Drilling" },
+        { "id": 20, "fullName": "Tina Young", "role": "Contributor", "department": "Production" }
+      ],
+      "iconDef": [
+        {
+          "role": "Administrator",
+          "icon": "FaUserShield",
+          "color": "#f44336"
+        },
+        {
+          "role": "Project Owner",
+          "icon": "FaUserTie",
+          "color": "#009688"
+        },
+        {
+          "role": "Contributor",
+          "icon": "FaUserEdit",
+          "color": "#00bcd4"
+        },
+        {
+          "role": "Reviewer/Approver",
+          "icon": "FaUserCheck",
+          "color": "#2196f3"
+        },
+        {
+          "role": "Read-Only User",
+          "icon": "FaUserLock",
+          "color": "#90a4ae"
+        }
+      ]
+    }
+  },
+  
+  
+  {
+    "name": "DashboardsGadget",
+    "gadgetType": "listsearch",
+    "title": "Dashboards",
+    "icon": "FaTachometerAlt",
+    "showHeader": true,
+    "showFooter": false,
+    "colSpan": "col-span-3",
+    "gadgetOptions": {
+      "searchPlaceholder": "Search Dashboards...",
+      "itemKey": "id",
+      "valueMembers": ["name", "description"],
+      "data": [
+        {
+          "id": 1,
+          "name": "Reservoir Performance Dashboard",
+          "description": "Provides an overview of key reservoir metrics such as pressure, temperature, and saturation levels. Ideal for monitoring reservoir health and performance in real-time."
+        },
+        {
+          "id": 2,
+          "name": "Production Analytics Dashboard",
+          "description": "Focuses on tracking oil and gas production rates, cumulative production, and production forecasts. Useful for assessing production trends and optimizing output."
+        },
+        {
+          "id": 3,
+          "name": "Well Performance Dashboard",
+          "description": "Displays detailed performance indicators for each well, including production rates, downtime, and efficiency metrics. Helps in identifying underperforming wells and areas for improvement."
+        },
+        {
+          "id": 4,
+          "name": "Reservoir Pressure Monitoring Dashboard",
+          "description": "Dedicated to monitoring reservoir pressure over time, highlighting trends and potential issues. Essential for maintaining reservoir integrity and optimizing injection strategies."
+        },
+        {
+          "id": 5,
+          "name": "Drilling Operations Dashboard",
+          "description": "Tracks drilling activities, including drilling rates, mud usage, and equipment performance. Facilitates efficient drilling operations and resource management."
+        },
+        {
+          "id": 6,
+          "name": "Cumulative Production Overview Dashboard",
+          "description": "Visualizes cumulative oil and gas production across different reservoirs or fields, aiding in long-term performance assessment and strategic planning."
+        },
+        {
+          "id": 7,
+          "name": "Reservoir Health Metrics Dashboard",
+          "description": "Showcases key health indicators such as porosity, permeability, and fluid saturation. Crucial for evaluating reservoir conditions and planning interventions."
+        },
+        {
+          "id": 8,
+          "name": "Environmental Impact Dashboard",
+          "description": "Monitors environmental metrics like CO₂ emissions, water usage, and waste generation. Supports sustainability initiatives and regulatory compliance."
+        },
+        {
+          "id": 9,
+          "name": "Maintenance and Reliability Dashboard",
+          "description": "Lists upcoming and completed maintenance tasks, equipment reliability statistics, and maintenance costs. Ensures timely maintenance and reduces operational downtime."
+        },
+        {
+          "id": 10,
+          "name": "Reservoir Simulation Dashboard",
+          "description": "Integrates simulation results to predict reservoir behavior under various scenarios. Assists in making informed decisions for reservoir management and development."
+        },
+        {
+          "id": 11,
+          "name": "Data Integrity and Quality Dashboard",
+          "description": "Monitors the quality and integrity of data inputs, highlighting discrepancies or gaps. Ensures reliable data for accurate reservoir analysis and reporting."
+        },
+        {
+          "id": 12,
+          "name": "Operational Efficiency Dashboard",
+          "description": "Analyzes operational workflows, resource allocation, and process efficiencies. Aims to streamline operations and enhance overall productivity."
+        },
+        {
+          "id": 13,
+          "name": "Risk Assessment Dashboard",
+          "description": "Identifies and evaluates potential risks related to reservoir operations, including technical, environmental, and financial risks. Facilitates proactive risk management strategies."
+        },
+        {
+          "id": 14,
+          "name": "Economic Indicators Dashboard",
+          "description": "Tracks economic metrics such as production costs, revenue, and profitability. Supports financial planning and investment decisions within reservoir projects."
+        },
+        {
+          "id": 15,
+          "name": "Hydraulic Fracturing Dashboard",
+          "description": "Monitors hydraulic fracturing operations, including fracture propagation, fluid volumes, and pressure profiles. Essential for optimizing fracturing processes and enhancing reservoir connectivity."
+        },
+        {
+          "id": 16,
+          "name": "Gas Injection Monitoring Dashboard",
+          "description": "Keeps track of gas injection rates, pressures, and volumes. Vital for maintaining pressure support and enhancing oil recovery in depleted reservoirs."
+        },
+        {
+          "id": 17,
+          "name": "Seismic Data Visualization Dashboard",
+          "description": "Presents seismic survey data through interactive visualizations, aiding in subsurface mapping and reservoir characterization."
+        },
+        {
+          "id": 18,
+          "name": "Field Development Planning Dashboard",
+          "description": "Assists in planning field development strategies, including well placement, infrastructure needs, and resource allocation."
+        },
+        {
+          "id": 19,
+          "name": "Asset Management Dashboard",
+          "description": "Manages reservoir-related assets, tracking their status, utilization, and lifecycle. Ensures optimal asset performance and longevity."
+        },
+        {
+          "id": 20,
+          "name": "Collaborative Reservoir Management Dashboard",
+          "description": "Facilitates collaboration among reservoir engineers, geologists, and operations teams by providing a centralized platform for data sharing and joint analysis."
+        }
+      ],
+      "iconDef": [
+        {
+          "name": "Default Dashboard",
+          "icon": "FaChartPie",
+          "color": "#6B7280"
+        }
+      ]
+    }
+  },
+  
+  {
+    "name": "models",
+    "gadgetType": "listsearch",
+    "title": "Models",
+    "icon": "FaTools",
+    "showHeader": true,
+    "showFooter": false,
+    "colSpan": "col-span-3",
+    "gadgetOptions": {
+      "searchPlaceholder": "Search Models...",
+      "itemKey": "id",
+      "valueMembers": ["scenarioName", "scenarioType"],
+      "data": [
+        { "id": 1, "scenarioName": "Black Oil PVT Analysis", "scenarioType": "PVT Calculator" },
+        { "id": 2, "scenarioName": "Gas Condensate PVT Modeling", "scenarioType": "PVT Calculator" },
+        { "id": 3, "scenarioName": "Compositional Fluid Behavior Simulation", "scenarioType": "PVT Calculator" },
+        { "id": 4, "scenarioName": "Volatile Oil PVT Properties", "scenarioType": "PVT Calculator" },
+        { "id": 5, "scenarioName": "Live Oil PVT Characterization", "scenarioType": "PVT Calculator" },
+  
+        { "id": 6, "scenarioName": "Horizontal Wellbore Stability Analysis", "scenarioType": "Wellbore Calculator" },
+        { "id": 7, "scenarioName": "Vertical Wellbore Pressure Loss Calculation", "scenarioType": "Wellbore Calculator" },
+        { "id": 8, "scenarioName": "Annular Pressure Build-up Analysis", "scenarioType": "Wellbore Calculator" },
+        { "id": 9, "scenarioName": "Wellbore Heat Transfer Simulation", "scenarioType": "Wellbore Calculator" },
+        { "id": 10, "scenarioName": "Multiphase Flow in Wellbore Analysis", "scenarioType": "Wellbore Calculator" },
+  
+        { "id": 11, "scenarioName": "Shale Gas Reservoir Performance Prediction", "scenarioType": "Reservoir Simulator" },
+        { "id": 12, "scenarioName": "Carbonate Reservoir Simulation", "scenarioType": "Reservoir Simulator" },
+        { "id": 13, "scenarioName": "Enhanced Oil Recovery (EOR) Simulation", "scenarioType": "Reservoir Simulator" },
+        { "id": 14, "scenarioName": "Waterflooding Reservoir Model", "scenarioType": "Reservoir Simulator" },
+        { "id": 15, "scenarioName": "CO₂ Injection Reservoir Performance", "scenarioType": "Reservoir Simulator" },
+  
+        { "id": 16, "scenarioName": "Numerical Decline Curve Analysis", "scenarioType": "Numeric RTA" },
+        { "id": 17, "scenarioName": "Transient Pressure Behavior in Tight Gas Reservoirs", "scenarioType": "Numeric RTA" },
+        { "id": 18, "scenarioName": "Fracture Conductivity Decline Simulation", "scenarioType": "Numeric RTA" },
+        { "id": 19, "scenarioName": "Gas Well Decline Prediction Model", "scenarioType": "Numeric RTA" },
+        { "id": 20, "scenarioName": "Transient Flow Modeling in Shale Reservoirs", "scenarioType": "Numeric RTA" },
+  
+        { "id": 21, "scenarioName": "Fractional Flow Analysis for Water Breakthrough", "scenarioType": "Fractional RTA" },
+        { "id": 22, "scenarioName": "Gas-Water Fractional Flow Behavior", "scenarioType": "Fractional RTA" },
+        { "id": 23, "scenarioName": "Oil-Water Fractional Flow Modeling", "scenarioType": "Fractional RTA" },
+        { "id": 24, "scenarioName": "Water Injection Sweep Efficiency Prediction", "scenarioType": "Fractional RTA" },
+        { "id": 25, "scenarioName": "Gas-Water Relative Permeability Estimation", "scenarioType": "Fractional RTA" },
+  
+        { "id": 26, "scenarioName": "Unconventional Oil Recovery Simulation", "scenarioType": "Unconventional Numeric Model" },
+        { "id": 27, "scenarioName": "Tight Gas Reservoir Hydraulic Fracture Modeling", "scenarioType": "Unconventional Numeric Model" },
+        { "id": 28, "scenarioName": "Shale Oil Multiphase Flow Simulation", "scenarioType": "Unconventional Numeric Model" },
+        { "id": 29, "scenarioName": "Unconventional Reservoir Gas Transport Mechanisms", "scenarioType": "Unconventional Numeric Model" },
+        { "id": 30, "scenarioName": "Matrix-Fracture Flow Coupling in Shale Gas", "scenarioType": "Unconventional Numeric Model" },
+  
+        { "id": 31, "scenarioName": "Gas Lift Performance Optimization", "scenarioType": "Inflow/Outflow" },
+        { "id": 32, "scenarioName": "ESP Pump Performance Curve Simulation", "scenarioType": "Inflow/Outflow" },
+        { "id": 33, "scenarioName": "Inflow Performance Relationship (IPR) Modeling", "scenarioType": "Inflow/Outflow" },
+        { "id": 34, "scenarioName": "Outflow Analysis for Multiphase Production Systems", "scenarioType": "Inflow/Outflow" },
+        { "id": 35, "scenarioName": "Choke Performance and Flow Behavior Simulation", "scenarioType": "Inflow/Outflow" },
+  
+        { "id": 36, "scenarioName": "Flowing Material Balance Analysis", "scenarioType": "Flowing Material Model" },
+        { "id": 37, "scenarioName": "Hydraulic Fracture Flow Rate Prediction", "scenarioType": "Flowing Material Model" },
+        { "id": 38, "scenarioName": "Reservoir Flowing Material Mass Balance", "scenarioType": "Flowing Material Model" },
+        { "id": 39, "scenarioName": "Fracture Closure Impact on Flowing Material", "scenarioType": "Flowing Material Model" },
+        { "id": 40, "scenarioName": "Decline Curve Using Flowing Material Balance", "scenarioType": "Flowing Material Model" }
+      ],
+     "iconDef": [
+      { "scenarioType": "PVT Calculator", "icon": "FaTint", "color": "#1ABB9C" },
+      { "scenarioType": "Wellbore Calculator", "icon": "FaOilCan", "color": "#1995AD" },
+      { "scenarioType": "Reservoir Simulator", "icon": "FaMountain", "color": "#375E97" },
+      { "scenarioType": "Numeric RTA", "icon": "FaChartLine", "color": "#20948B" },
+      { "scenarioType": "Fractional RTA", "icon": "FaPercentage", "color": "#3F51B5" },
+      { "scenarioType": "Unconventional Numeric Model", "icon": "FaCubes", "color": "#5C6BC0" },
+      { "scenarioType": "Inflow/Outflow", "icon": "FaArrowDown", "color": "#536DFE" },
+      { "scenarioType": "Flowing Material Model", "icon": "FaWater", "color": "#4682B4" }
+    ]
+    }
+  },
+  
+  {
+    "name": "simulationTools",
+    "gadgetType": "listsearch",
+    "title": "Saved Simulations",
+    "icon": "FaTools",
+    "showHeader": true,
+    "showFooter": false,
+    "colSpan": "col-span-3",
+    "gadgetOptions": {
+      "searchPlaceholder": "Search Saved Simulations...",
+      "itemKey": "id",
+      "valueMembers": ["scenarioName", "scenarioType", "savedBy", "dateSaved"],
+      "data": [
+        { "id": 1, "scenarioName": "Black Oil PVT Analysis", "scenarioType": "PVT Calculator", "savedBy": "Alice Johnson", "dateSaved": "2024-10-15", "simulationParams": { "temperature": "300°F", "pressure": "5000 psi", "oilAPI": "32" } },
+        { "id": 2, "scenarioName": "Gas Condensate PVT Modeling", "scenarioType": "PVT Calculator", "savedBy": "Bob Smith", "dateSaved": "2024-09-28", "simulationParams": { "temperature": "250°F", "pressure": "4500 psi", "condensateGasRatio": "1200 scf/STB" } },
+        { "id": 3, "scenarioName": "Volatile Oil PVT Properties", "scenarioType": "PVT Calculator", "savedBy": "Charlie Davis", "dateSaved": "2024-08-14", "simulationParams": { "temperature": "320°F", "pressure": "5500 psi", "oilAPI": "38" } },
+        { "id": 4, "scenarioName": "Compositional Fluid Behavior Simulation", "scenarioType": "PVT Calculator", "savedBy": "Diana Evans", "dateSaved": "2024-07-30", "simulationParams": { "temperature": "280°F", "pressure": "6000 psi", "composition": "65% methane, 25% ethane, 10% others" } },
+        { "id": 5, "scenarioName": "Live Oil PVT Characterization", "scenarioType": "PVT Calculator", "savedBy": "Ethan Harris", "dateSaved": "2024-06-18", "simulationParams": { "temperature": "290°F", "pressure": "4500 psi", "oilAPI": "25" } },
+  
+        { "id": 6, "scenarioName": "Horizontal Wellbore Stability Analysis", "scenarioType": "Wellbore Calculator", "savedBy": "Fiona Garcia", "dateSaved": "2024-10-02", "simulationParams": { "wellboreDepth": "10,000 ft", "formationPressure": "6000 psi", "mudWeight": "12.5 ppg" } },
+        { "id": 7, "scenarioName": "Vertical Wellbore Pressure Loss Calculation", "scenarioType": "Wellbore Calculator", "savedBy": "George Brown", "dateSaved": "2024-09-10", "simulationParams": { "wellboreDiameter": "8.5 inches", "flowRate": "300 BPD", "fluidType": "oil" } },
+        { "id": 8, "scenarioName": "Annular Pressure Build-up Analysis", "scenarioType": "Wellbore Calculator", "savedBy": "Hannah Wilson", "dateSaved": "2024-08-20", "simulationParams": { "annulusDiameter": "12 inches", "temperatureGradient": "15°F per 100 ft", "wellDepth": "12,000 ft" } },
+        { "id": 9, "scenarioName": "Wellbore Heat Transfer Simulation", "scenarioType": "Wellbore Calculator", "savedBy": "Ian Thomas", "dateSaved": "2024-07-11", "simulationParams": { "heatTransferCoefficient": "50 Btu/hr·ft²·°F", "flowingFluidTemperature": "180°F", "wellDepth": "11,000 ft" } },
+        { "id": 10, "scenarioName": "Multiphase Flow in Wellbore Analysis", "scenarioType": "Wellbore Calculator", "savedBy": "Julia Martinez", "dateSaved": "2024-06-03", "simulationParams": { "gasOilRatio": "1500 scf/STB", "waterCut": "30%", "wellDepth": "9000 ft" } },
+  
+        { "id": 11, "scenarioName": "Shale Gas Reservoir Performance Prediction", "scenarioType": "Reservoir Simulator", "savedBy": "Kevin Lee", "dateSaved": "2024-10-15", "simulationParams": { "gasPermeability": "0.001 mD", "initialGasInPlace": "50 Bcf", "fractureSpacing": "200 ft" } },
+        { "id": 12, "scenarioName": "Carbonate Reservoir Simulation", "scenarioType": "Reservoir Simulator", "savedBy": "Laura Taylor", "dateSaved": "2024-09-25", "simulationParams": { "oilPermeability": "30 mD", "porosity": "15%", "fractureDensity": "high" } },
+        { "id": 13, "scenarioName": "Enhanced Oil Recovery (EOR) Simulation", "scenarioType": "Reservoir Simulator", "savedBy": "Michael Anderson", "dateSaved": "2024-08-29", "simulationParams": { "EORMethod": "CO₂ injection", "pressureMaintenance": "constant", "oilRecoveryFactor": "45%" } },
+        { "id": 14, "scenarioName": "Waterflooding Reservoir Model", "scenarioType": "Reservoir Simulator", "savedBy": "Nina Rodriguez", "dateSaved": "2024-07-05", "simulationParams": { "injectionRate": "5000 BPD", "wellSpacing": "400 acres", "oilSaturation": "30%" } },
+        { "id": 15, "scenarioName": "CO₂ Injection Reservoir Performance", "scenarioType": "Reservoir Simulator", "savedBy": "Oliver Clark", "dateSaved": "2024-06-15", "simulationParams": { "CO₂InjectionRate": "3000 scf/day", "pressureMaintenance": "maintained", "oilSaturation": "25%" } },
+  
+        { "id": 16, "scenarioName": "Numerical Decline Curve Analysis", "scenarioType": "Numeric RTA", "savedBy": "Paula Lewis", "dateSaved": "2024-10-05", "simulationParams": { "declineRate": "10% per year", "initialProduction": "1000 Bbl/day", "economicLimit": "50 Bbl/day" } },
+        { "id": 17, "scenarioName": "Transient Pressure Behavior in Tight Gas Reservoirs", "scenarioType": "Numeric RTA", "savedBy": "Quentin Walker", "dateSaved": "2024-09-21", "simulationParams": { "gasPermeability": "0.0005 mD", "fractureHalfLength": "300 ft", "initialReservoirPressure": "4500 psi" } },
+        { "id": 18, "scenarioName": "Fracture Conductivity Decline Simulation", "scenarioType": "Numeric RTA", "savedBy": "Rachel Hall", "dateSaved": "2024-08-10", "simulationParams": { "fractureConductivity": "20 mD-ft", "proppantType": "ceramic", "closureStress": "5000 psi" } },
+        { "id": 19, "scenarioName": "Gas Well Decline Prediction Model", "scenarioType": "Numeric RTA", "savedBy": "Steven Allen", "dateSaved": "2024-07-22", "simulationParams": { "initialFlowRate": "5000 Mcf/day", "declineExponent": "0.7", "economicLimit": "100 Mcf/day" } },
+        { "id": 20, "scenarioName": "Transient Flow Modeling in Shale Reservoirs", "scenarioType": "Numeric RTA", "savedBy": "Tina Young", "dateSaved": "2024-06-11", "simulationParams": { "fractureSpacing": "150 ft", "reservoirPermeability": "0.001 mD", "initialPressure": "4000 psi" } },
+  
+        { "id": 21, "scenarioName": "Fractional Flow Analysis for Water Breakthrough", "scenarioType": "Fractional RTA", "savedBy": "Alice Johnson", "dateSaved": "2024-10-08", "simulationParams": { "waterCut": "40%", "breakthroughTime": "5 years", "oilWaterContact": "dynamic" } },
+        { "id": 22, "scenarioName": "Gas-Water Fractional Flow Behavior", "scenarioType": "Fractional RTA", "savedBy": "Bob Smith", "dateSaved": "2024-09-30", "simulationParams": { "gasPermeability": "0.002 mD", "waterPermeability": "0.001 mD", "fractureSpacing": "250 ft" } },
+        { "id": 23, "scenarioName": "Oil-Water Fractional Flow Modeling", "scenarioType": "Fractional RTA", "savedBy": "Charlie Davis", "dateSaved": "2024-08-12", "simulationParams": { "waterCut": "25%", "residualOilSaturation": "30%", "injectionRate": "2000 BPD" } },
+        { "id": 24, "scenarioName": "Water Injection Sweep Efficiency Prediction", "scenarioType": "Fractional RTA", "savedBy": "Diana Evans", "dateSaved": "2024-07-20", "simulationParams": { "sweepEfficiency": "50%", "injectionRate": "3000 BPD", "wellSpacing": "500 acres" } },
+        { "id": 25, "scenarioName": "Gas-Water Relative Permeability Estimation", "scenarioType": "Fractional RTA", "savedBy": "Ethan Harris", "dateSaved": "2024-06-25", "simulationParams": { "relativePermeabilityCurve": "Corey model", "gasPermeability": "0.003 mD", "waterPermeability": "0.0015 mD" } },
+  
+        { "id": 26, "scenarioName": "Unconventional Oil Recovery Simulation", "scenarioType": "Unconventional Numeric Model", "savedBy": "Fiona Garcia", "dateSaved": "2024-10-10", "simulationParams": { "oilSaturation": "25%", "fractureConductivity": "50 mD-ft", "injectionRate": "1500 BPD" } },
+        { "id": 27, "scenarioName": "Tight Gas Reservoir Hydraulic Fracture Modeling", "scenarioType": "Unconventional Numeric Model", "savedBy": "George Brown", "dateSaved": "2024-09-17", "simulationParams": { "gasPermeability": "0.001 mD", "fractureHalfLength": "400 ft", "proppantConcentration": "4 ppg" } },
+        { "id": 28, "scenarioName": "Shale Oil Multiphase Flow Simulation", "scenarioType": "Unconventional Numeric Model", "savedBy": "Hannah Wilson", "dateSaved": "2024-08-03", "simulationParams": { "oilPermeability": "0.002 mD", "waterCut": "20%", "fractureSpacing": "200 ft" } },
+        { "id": 29, "scenarioName": "Unconventional Reservoir Gas Transport Mechanisms", "scenarioType": "Unconventional Numeric Model", "savedBy": "Ian Thomas", "dateSaved": "2024-07-25", "simulationParams": { "matrixPermeability": "0.0005 mD", "fractureSpacing": "180 ft", "pressureGradient": "250 psi/1000 ft" } },
+        { "id": 30, "scenarioName": "Matrix-Fracture Flow Coupling in Shale Gas", "scenarioType": "Unconventional Numeric Model", "savedBy": "Julia Martinez", "dateSaved": "2024-06-15", "simulationParams": { "matrixPermeability": "0.0003 mD", "fractureConductivity": "10 mD-ft", "initialGasInPlace": "75 Bcf" } },
+  
+        { "id": 31, "scenarioName": "Gas Lift Performance Optimization", "scenarioType": "Inflow/Outflow", "savedBy": "Kevin Lee", "dateSaved": "2024-10-03", "simulationParams": { "gasInjectionRate": "200 Mcf/day", "oilProductionRate": "1200 BPD", "wellDepth": "8000 ft" } },
+        { "id": 32, "scenarioName": "ESP Pump Performance Curve Simulation", "scenarioType": "Inflow/Outflow", "savedBy": "Laura Taylor", "dateSaved": "2024-09-19", "simulationParams": { "pumpEfficiency": "85%", "productionRate": "1500 BPD", "wellDepth": "7000 ft" } },
+        { "id": 33, "scenarioName": "Inflow Performance Relationship (IPR) Modeling", "scenarioType": "Inflow/Outflow", "savedBy": "Michael Anderson", "dateSaved": "2024-08-22", "simulationParams": { "reservoirPressure": "5000 psi", "flowingWellheadPressure": "1500 psi", "productivityIndex": "1.2 BPD/psi" } },
+        { "id": 34, "scenarioName": "Outflow Analysis for Multiphase Production Systems", "scenarioType": "Inflow/Outflow", "savedBy": "Nina Rodriguez", "dateSaved": "2024-07-02", "simulationParams": { "flowRate": "2000 BPD", "gasOilRatio": "1200 scf/STB", "waterCut": "15%" } },
+        { "id": 35, "scenarioName": "Choke Performance and Flow Behavior Simulation", "scenarioType": "Inflow/Outflow", "savedBy": "Oliver Clark", "dateSaved": "2024-06-28", "simulationParams": { "chokeSize": "1.25 inches", "flowRate": "1000 BPD", "wellheadPressure": "2000 psi" } },
+  
+        { "id": 36, "scenarioName": "Flowing Material Balance Analysis", "scenarioType": "Flowing Material Model", "savedBy": "Paula Lewis", "dateSaved": "2024-10-12", "simulationParams": { "initialOilInPlace": "100 MMbbl", "cumulativeProduction": "10 MMbbl", "pressureDecline": "200 psi" } },
+        { "id": 37, "scenarioName": "Hydraulic Fracture Flow Rate Prediction", "scenarioType": "Flowing Material Model", "savedBy": "Quentin Walker", "dateSaved": "2024-09-18", "simulationParams": { "fractureConductivity": "15 mD-ft", "gasProductionRate": "5000 Mcf/day", "fractureHalfLength": "300 ft" } },
+        { "id": 38, "scenarioName": "Reservoir Flowing Material Mass Balance", "scenarioType": "Flowing Material Model", "savedBy": "Rachel Hall", "dateSaved": "2024-08-04", "simulationParams": { "initialReservoirPressure": "4000 psi", "cumulativeProduction": "15 MMbbl", "oilRecoveryFactor": "35%" } },
+        { "id": 39, "scenarioName": "Fracture Closure Impact on Flowing Material", "scenarioType": "Flowing Material Model", "savedBy": "Steven Allen", "dateSaved": "2024-07-26", "simulationParams": { "closurePressure": "4500 psi", "proppantConcentration": "3 ppg", "fractureLength": "200 ft" } },
+        { "id": 40, "scenarioName": "Decline Curve Using Flowing Material Balance", "scenarioType": "Flowing Material Model", "savedBy": "Tina Young", "dateSaved": "2024-06-18", "simulationParams": { "initialFlowRate": "1200 BPD", "declineRate": "8% per year", "economicLimit": "100 BPD" } }
+      ],
+      "iconDef": [
+      { "scenarioType": "PVT Calculator", "icon": "FaTint", "color": "#1ABB9C" },
+      { "scenarioType": "Wellbore Calculator", "icon": "FaOilCan", "color": "#1995AD" },
+      { "scenarioType": "Reservoir Simulator", "icon": "FaMountain", "color": "#375E97" },
+      { "scenarioType": "Numeric RTA", "icon": "FaChartLine", "color": "#20948B" },
+      { "scenarioType": "Fractional RTA", "icon": "FaPercentage", "color": "#3F51B5" },
+      { "scenarioType": "Unconventional Numeric Model", "icon": "FaCubes", "color": "#5C6BC0" },
+      { "scenarioType": "Inflow/Outflow", "icon": "FaArrowDown", "color": "#536DFE" },
+      { "scenarioType": "Flowing Material Model", "icon": "FaWater", "color": "#4682B4" }
+    ]
+    }
   }
+  
   ]
 }
+

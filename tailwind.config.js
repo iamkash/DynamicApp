@@ -5,9 +5,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primaryBackground: 'var(--primaryBackground)',
+        secondaryBackground: 'var(--secondaryBackground)',
+        tertiaryBackground: 'var(--tertiaryBackground)',
+        primaryTextColor: 'var(--primaryTextColor)',
+        secondaryTextColor: 'var(--secondaryTextColor)',
+        highlightBackgroundColor: 'var(--highlightBackgroundColor)',
+        accentTextColor: 'var(--accentTextColor)',
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'], // Add Poppins font (optional)
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['hover'],
+      textColor: ['hover'],
     },
   },
   plugins: [],

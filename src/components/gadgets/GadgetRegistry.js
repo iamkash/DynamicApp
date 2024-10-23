@@ -8,9 +8,7 @@ const LazyProjectsGadget = React.lazy(() => import('./ProjectsGadget'));
 const LazyTileGadget = React.lazy(() => import('./TileGadget'));
 const LazyMapGadget = React.lazy(() => import('./MapGadget'));
 const LazyQuickLinksGadget = React.lazy(() => import('./QuickLinksGadget'));
-
-
-
+const LazyListSearchGadget = React.lazy(() => import('./ListSearchGadget')); 
 
 const GadgetRegistry = {
   form: LazyFormGadget,
@@ -18,12 +16,12 @@ const GadgetRegistry = {
   chart: LazyChartGadget,
   projects: LazyProjectsGadget,
   tile: LazyTileGadget,
-  map:LazyMapGadget,
-  quicklinks: LazyQuickLinksGadget
+  map: LazyMapGadget,
+  quicklinks: LazyQuickLinksGadget,
+  listsearch: LazyListSearchGadget, 
   // Add more gadgets here as needed...
 };
 
 export const getGadgetComponent = (bodyType) => {
   return GadgetRegistry[bodyType] || null;
 };
-

@@ -11,3 +11,28 @@
     padding-top: 50px; /* Adjust this value to match your header's height */
   }
 
+  .fullscreen-mode .gadget-container {
+    display: none;
+  }
+
+  /* In your CSS or Tailwind configuration */
+
+.fullscreen-mode {
+  /* Adjust the grid when in fullscreen mode */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.gadget-container {
+  /* Ensure it takes full height in fullscreen */
+  height: 100%;
+}
+
+.gadget-body {
+  /* Adjust height and overflow */
+  height: 100%;
+  overflow-y: auto;
+}
+
+  
+
+

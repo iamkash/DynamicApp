@@ -78,7 +78,7 @@ const Gadget = ({ gadget, index }) => {
   return (
     <div
       ref={gadgetRef}
-      className={`gadget-container shadow-lg p-2 mb-2 ${colSpan} flex flex-col justify-between`}
+      className={`gadget-container shadow-lg p-2  ${colSpan} flex flex-col justify-between`}
       style={{
         backgroundColor: appliedBackgroundColor,  // Apply dynamic background color
         color: 'var(--primaryTextColor)',

@@ -337,11 +337,11 @@ const filterProjects = () => {
               <input type="checkbox" className="mr-4 mt-2" /> {/* Align checkbox */}
               <div className="flex flex-col">
                 {/* Row 1: Project Name */}
+               
+
                 <Link
-                  to={{
-                    pathname: `/project-home/`,
-                    state: { task }
-                  }}
+                  to="/project-home/"
+                  state={{ task }}
                   className="font-bold text-sm text-blue-500 hover:underline"
                 >
                   {task.projectName}

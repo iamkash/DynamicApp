@@ -1,18 +1,39 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa'; // Dynamically load FontAwesome icons
+import * as GiIcons from 'react-icons/gi';
+import * as FaIcons from 'react-icons/fa';
+import * as MdIcons from 'react-icons/md';
+
+const getIconComponent = (iconName) => {
+  if (GiIcons[iconName]) return GiIcons[iconName];
+  if (FaIcons[iconName]) return FaIcons[iconName];
+  if (MdIcons[iconName]) return MdIcons[iconName];
+  return null;
+};
 
 const QuickLinksGadget = ({ gadget = {} }) => {
-  const { title, value, icon, link, uom } = gadget;
-
-  // Dynamically load the icon component based on the string name in the JSON
-  const IconComponent = FaIcons[icon] || FaIcons.FaQuestionCircle;  // Default to FaQuestionCircle if icon is not found
-
-  // Use an anchor tag wrapping the entire tile if a link is provided
-  const Wrapper = link ? 'a' : 'div';
+  const { buttons = [] } = gadget;
 
   return (
-    <div className="w-full">
-     
+    <div className="flex flex-wrap justify-start">
+      {buttons.map((button, index) => {
+        const IconComponent = getIconComponent(button.icon);
+
+        return (
+          <a
+            key={index}
+            href={button.link}
+            className="w-[100px] h-[100px] bg-tertiaryBackground text-primaryTextColor text-xs flex flex-col justify-center items-center rounded shadow-lg hover:bg-highlightBackgroundColor hover:text-accentTextColor m-2"
+            aria-label={button.text}
+          >
+            {IconComponent ? (
+              <IconComponent size={32} />
+            ) : (
+              <div className="w-8 h-8" /> // Placeholder if icon not found
+            )}
+            <span className="mt-2 text-center">{button.text}</span>
+          </a>
+        );
+      })}
     </div>
   );
 };
