@@ -441,7 +441,7 @@
     "gadgetOptions": {
       "searchPlaceholder": "Search Saved Simulations...",
       "itemKey": "id",
-      "valueMembers": ["scenarioName", "scenarioType", "savedBy", "dateSaved"],
+      "valueMembers": ["scenarioName", "scenarioType", "savedBy", "dateSaved","simulationParams"],
       "data": [
         { "id": 1, "scenarioName": "Black Oil PVT Analysis", "scenarioType": "PVT Calculator", "savedBy": "Alice Johnson", "dateSaved": "2024-10-15", "simulationParams": { "temperature": "300°F", "pressure": "5000 psi", "oilAPI": "32" } },
         { "id": 2, "scenarioName": "Gas Condensate PVT Modeling", "scenarioType": "PVT Calculator", "savedBy": "Bob Smith", "dateSaved": "2024-09-28", "simulationParams": { "temperature": "250°F", "pressure": "4500 psi", "condensateGasRatio": "1200 scf/STB" } },
