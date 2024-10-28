@@ -9,6 +9,8 @@ const LazyTileGadget = React.lazy(() => import('./TileGadget'));
 const LazyMapGadget = React.lazy(() => import('./MapGadget'));
 const LazyQuickLinksGadget = React.lazy(() => import('./QuickLinksGadget'));
 const LazyListSearchGadget = React.lazy(() => import('./ListSearchGadget')); 
+const LazyFormDocumentGadget = React.lazy(() => import('./FormDocumentGadget')); 
+
 
 const GadgetRegistry = {
   form: LazyFormGadget,
@@ -19,6 +21,7 @@ const GadgetRegistry = {
   map: LazyMapGadget,
   quicklinks: LazyQuickLinksGadget,
   listsearch: LazyListSearchGadget, 
+  formDocument:LazyFormDocumentGadget
   // Add more gadgets here as needed...
 };
 
