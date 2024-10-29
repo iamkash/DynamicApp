@@ -96,12 +96,36 @@
       "colSpan":12
     },
     {
+      "type": "comboBox",
+      "label": "Unit of Measure",
+      "name": "uomSelection",
+      "required": true,
+      "options": [
+        { "label": "Default", "value": "default" },
+        { "label": "SI System", "value": "si" },
+        { "label": "MI System", "value": "mi" },
+        { "label": "Custom 01", "value": "custom" },
+        { "label": "Custom 02", "value": "custom1" }
+      ],
+      "placeholder": "Select Unit of Measure Preference",
+      "width": "w-1/2",
+      "colSpan":4
+    },
+    {
       "type": "switch",
       "label": "Add to Favorites",
       "name": "subscribe",
       "checked": false,
       "width": "w-full",
-      "colSpan":12
+      "colSpan":4
+    },
+    {
+      "type": "switch",
+      "label": "Set project to Public",
+      "name": "private",
+      "checked": false,
+      "width": "w-full",
+      "colSpan":4
     }
     
   ]
