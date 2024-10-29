@@ -93,7 +93,7 @@ const FormDocumentGadget = ({ gadget }) => {
           <button
             key={index}
             type="button"
-            className={`btn ${button.action === 'save' ? 'bg-blue-500' : 'bg-gray-300'} text-white px-4 py-2 rounded`}
+            className={`btn ${button.action === 'save' ? 'bg-blue-500' : 'bg-gray-300'} text-white text-sm px-2 py-2 rounded`}
             onClick={() => handleButtonAction(button.action)}
           >
             {button.label}
