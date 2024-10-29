@@ -17,11 +17,11 @@
       "colSpan":"col-span-2",
       "colorRotation":true,
       "gadgetOptions": {
-        "title": "Overall Project Completion",
+        "title": "Edit Project",
         "value": "85",
         "uom":"%",
         "icon": "FaCheckCircle",
-        "link": "/project-completion"
+        "link": "/project-new/"
       }
     },
     {
@@ -32,7 +32,7 @@
       "colSpan":"col-span-2",
       "colorRotation":true,
       "gadgetOptions": {
-        "title": "Total Wells Analyzed",
+        "title": "Manage Wells",
         "value": "12",
         "uom":"Wells",
         "icon": "FaOilCan",

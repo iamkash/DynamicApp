@@ -109,7 +109,7 @@
       ],
       "placeholder": "Select Unit of Measure Preference",
       "width": "w-1/2",
-      "colSpan":4
+      "colSpan":6
     },
     {
       "type": "switch",
@@ -117,7 +117,15 @@
       "name": "subscribe",
       "checked": false,
       "width": "w-full",
-      "colSpan":4
+      "colSpan":3
+    },
+    {
+      "type": "switch",
+      "label": "Set as default Project",
+      "name": "default",
+      "checked": false,
+      "width": "w-full",
+      "colSpan":3
     },
     {
       "type": "switch",
@@ -125,7 +133,7 @@
       "name": "private",
       "checked": false,
       "width": "w-full",
-      "colSpan":4
+      "colSpan":12
     }
     
   ]
@@ -140,8 +148,19 @@
               {
                 "groupId": "dataSource",
                 "fields": [
-                  { "type": "checkbox", "label": "Enable Sync", "name": "enableSync", "options": [] }
-                ]
+                  {
+                    "type": "radioGroup",
+                    "label": "Data Sets",
+                    "name": "datasetSelector",
+                    "options": [
+                      { "label": " I would like to load data based on criteria", "value": "M" },
+                      { "label": "I would like to select data manually", "value": "F" }
+                    
+                    ],
+                    "required": true,
+                    "width": "w-full"
+                  }
+                  ]
               }
             ]
           },
