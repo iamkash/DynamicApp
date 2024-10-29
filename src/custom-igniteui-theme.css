@@ -67,5 +67,12 @@
  --ig-textarea-box-border-radius: 0px;
  --ig-textarea-border-border-radius: 0px;
  --ig-textarea-search-border-radius: 0px;
+
+
  
+}
+
+[part~="toggle-icon"] {
+  background: var(--toggle-button-background) !important;
+  color: var(--toggle-button-foreground);
 }

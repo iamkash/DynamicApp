@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as GiIcons from 'react-icons/gi';
 import * as FaIcons from 'react-icons/fa';
 import * as MdIcons from 'react-icons/md';
@@ -19,11 +20,10 @@ const QuickLinksGadget = ({ gadget = {} }) => {
         const IconComponent = getIconComponent(button.icon);
 
         return (
-          <a
-            key={index}
-            href={button.link}
-            className="w-[100px] h-[100px] bg-tertiaryBackground text-primaryTextColor text-xs flex flex-col justify-center items-center rounded shadow-lg hover:bg-highlightBackgroundColor hover:text-accentTextColor m-2"
-            aria-label={button.text}
+          <Link
+            
+            to="/project-new/" // Link to the workspace path
+            className="w-[100px] h-[100px] bg-tertiaryBackground text-primaryTextColor text-sm flex flex-col justify-center items-center rounded shadow-lg hover:bg-highlightBackgroundColor hover:text-accentTextColor m-2"
           >
             {IconComponent ? (
               <IconComponent size={32} />
@@ -31,7 +31,7 @@ const QuickLinksGadget = ({ gadget = {} }) => {
               <div className="w-8 h-8" /> // Placeholder if icon not found
             )}
             <span className="mt-2 text-center">{button.text}</span>
-          </a>
+          </Link>
         );
       })}
     </div>

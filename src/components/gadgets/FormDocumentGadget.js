@@ -22,7 +22,7 @@ const FormDocumentGadget = ({ gadget }) => {
       {/* Main content area excluding footer */}
       <div className="gap-2 flex flex-grow overflow-hidden">
         {/* Left Navigation Panel */}
-        <nav className="left-nav-panel w-1/4 p-4 border-r text-sm flex flex-col overflow-y-auto" style={{ backgroundColor: 'var(--tertiaryBackground)', borderColor: 'var(--secondaryBackground)', color: 'var(--primaryTextColor)' }}>
+        <nav className="left-nav-panel w-1/6 p-4 border-r text-sm flex flex-col overflow-y-auto" style={{ backgroundColor: 'var(--tertiaryBackground)', borderColor: 'var(--secondaryBackground)', color: 'var(--primaryTextColor)' }}>
           <ul className=" mb-6">
             {sections.map((section, index) => {
               const IconComponent = FaIcons[section.icon] || FaIcons.FaFolder;
@@ -58,7 +58,7 @@ const FormDocumentGadget = ({ gadget }) => {
         </nav>
 
         {/* Main Form Content Area */}
-        <div className=" p-2 w-3/4 flex flex-col overflow-y-auto" style={{ backgroundColor: 'var(--tertiaryBackground)', borderColor: 'var(--secondaryBackground)', color: 'var(--primaryTextColor)' }}>
+        <div className=" p-2 w-5/6 flex flex-col overflow-y-auto" style={{ backgroundColor: 'var(--tertiaryBackground)', borderColor: 'var(--secondaryBackground)', color: 'var(--primaryTextColor)' }}>
           {sections.map((section) => (
             <div
               key={section.sectionId}
