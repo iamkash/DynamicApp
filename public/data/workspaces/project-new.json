@@ -21,11 +21,91 @@
             "groups": [
               {
                 "groupId": "basicProjectInfo",
-                "fields": [
-                  { "type": "input", "label": "Project Name", "name": "projectName", "inputType": "text" },
-                  { "type": "textarea", "label": "Description", "name": "description" }
-                ]
-              }
+               "fields": [
+    {
+      "type": "textInput",
+      "label": "Project Name",
+      "name": "projectName",
+      "required": true,
+      "placeholder": "Enter project name",
+      "width": "w-full",
+      "maxLength": 100,
+      "colSpan":12
+    },
+    {
+      "type": "comboBox",
+      "label": "Project Module",
+      "name": "projectModule",
+      "required": true,
+      "options": [
+        { "label": "Upstream", "value": "moduleA" },
+        { "label": "GCPS", "value": "moduleB" },
+        { "label": "FCRS", "value": "moduleC" },
+        { "label": "MRTS", "value": "moduleC" },
+        { "label": "Sustainability", "value": "moduleD" },
+        { "label": "Energy Transition", "value": "moduleE" }
+      ],
+      "placeholder": "Select a module",
+      "width": "w-1/2",
+      "colSpan":4
+    },
+    {
+      "type": "comboBox",
+      "label": "Project Type",
+      "name": "projectType",
+      "required": true,
+      "options": [
+        { "label": "Engineering", "value": "internal" },
+        { "label": "GeoScience", "value": "external" },
+        { "label": "Exploration", "value": "external" },
+        { "label": "Development", "value": "Development" },
+        { "label": "Production", "value": "Production" },
+        { "label": "Enhanced Recovery", "value": "recovery" },
+        { "label": "Abandonment", "value": "Abandonment" },
+        { "label": "Reservoir Management", "value": "Reservoir Management" }
+      ],
+      "placeholder": "Select a project type",
+      "width": "w-1/2",
+      "colSpan":4
+    },
+    {
+      "type": "comboBox",
+      "label": "Project Status",
+      "name": "projectStatus",
+      "required": true,
+      "options": [
+        { "label": "New", "value": "internal" },
+        { "label": "Active", "value": "external" },
+        { "label": "Completed", "value": "external" },
+        { "label": "Closed", "value": "Development" },
+        { "label": "Archived", "value": "Production" }
+      ],
+      "placeholder": "Select a project status",
+      "width": "w-1/2",
+      "colSpan":4
+    },
+    {
+      "type": "textArea",
+      "label": "Project Description",
+      "name": "projectDescription",
+      "required": false,
+      "placeholder": "Enter project description",
+      "rows": 5,
+      "maxLength": 500,
+      "width": "w-full",
+      "colSpan":12
+    },
+    {
+      "type": "switch",
+      "label": "Add to Favorites",
+      "name": "subscribe",
+      "checked": false,
+      "width": "w-full",
+      "colSpan":12
+    }
+    
+  ]
+                }
             ]
           },
           {
@@ -36,7 +116,6 @@
               {
                 "groupId": "dataSource",
                 "fields": [
-                  { "type": "input", "label": "Data Source Name", "name": "dataSourceName", "inputType": "text" },
                   { "type": "checkbox", "label": "Enable Sync", "name": "enableSync", "options": [] }
                 ]
               }
@@ -50,7 +129,6 @@
               {
                 "groupId": "workflowSettings",
                 "fields": [
-                  { "type": "input", "label": "Workflow Name", "name": "workflowName", "inputType": "text" },
                   { "type": "select", "label": "Workflow Status", "name": "workflowStatus", "options": [
                       { "label": "Active", "value": "active" },
                       { "label": "Inactive", "value": "inactive" }
@@ -68,7 +146,6 @@
               {
                 "groupId": "dashboardConfig",
                 "fields": [
-                  { "type": "input", "label": "Dashboard Title", "name": "dashboardTitle", "inputType": "text" },
                   { "type": "textarea", "label": "Dashboard Description", "name": "dashboardDescription" }
                 ]
               }
@@ -82,7 +159,6 @@
               {
                 "groupId": "userAccess",
                 "fields": [
-                  { "type": "input", "label": "User Role", "name": "userRole", "inputType": "text" },
                   { "type": "checkbox", "label": "Admin Access", "name": "adminAccess", "options": [] }
                 ]
               }
@@ -96,7 +172,6 @@
               {
                 "groupId": "configSettings",
                 "fields": [
-                  { "type": "input", "label": "Config Name", "name": "configName", "inputType": "text" },
                   { "type": "radio", "label": "Config Mode", "name": "configMode", "options": [
                       { "label": "Automatic", "value": "automatic" },
                       { "label": "Manual", "value": "manual" }

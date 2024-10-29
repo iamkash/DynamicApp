@@ -30,6 +30,11 @@ export const fetchThemeSettings = async () => {
       // Set CSS variables for custom Highlight colors
       document.documentElement.style.setProperty('--highlightBackgroundColor', currentTheme.highlightBackgroundColor);
       document.documentElement.style.setProperty('--accentTextColor', currentTheme.accentTextColor);
+
+
+      document.documentElement.style.setProperty('--toggle-button-background', currentTheme.tertiaryBackground)
+      document.documentElement.style.setProperty('--toggle-button-foreground', currentTheme.primaryTextColor)
+     
     }
     
   };

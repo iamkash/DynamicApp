@@ -1,0 +1,62 @@
+@import 'igniteui-webcomponents/themes/light/material.css';
+
+/* Override Ignite UI theme variables */
+:root {
+
+  --toggle-button-background: var(--tertiaryBackground);
+  --toggle-button-foreground: var(--primaryTextColor);
+
+  --ig-surface-500: transparent;
+
+  --ig-input-box-background: var(--tertiaryBackground);
+  --ig-input-box-background-hover: var(--tertiaryBackground);
+  --ig-input-box-background-focus: var(--tertiaryBackground);
+  --ig-input-box-disabled-background: var(--tertiaryBackground);
+
+  --ig-input-idle-text-color: var(--primaryTextColor);
+  --ig-input-filled-text-color: var(--primaryTextColor);
+  --ig-input-filled-text-hover-color: var(--primaryTextColor);
+  --ig-input-focused-text-color: var(--primaryTextColor);
+  --ig-input-disabled-text-color: var(--secondaryTextColor);
+
+  /* Box and border radius (kept as default, modify as needed) */
+  --ig-input-box-border-radius: 0px;
+  --ig-input-border-border-radius: 0px;
+  --ig-input-search-border-radius: 0px;
+
+  /* Input size (adjust as needed) */
+  --ig-input-size: inherit;
+  --ig-input-default-size: inherit;
+
+  --ig-combo-list-background-color: var(--tertiaryBackground);
+/* Header, Item, and Icon Colors */
+--ig-combo-list-header-text-color: var(--primaryTextColor);
+--ig-combo-list-item-text-color: var(--primaryTextColor);
+--ig-combo-list-item-icon-color: var(--secondaryTextColor);
+
+/* Hover Item Colors */
+--ig-combo-list-hover-item-text-color: var(--primaryTextColor);
+--ig-combo-list-hover-item-icon-color: var(--primaryTextColor);
+--ig-combo-list-hover-item-background: var(--secondaryBackground);
+
+/* Focused Item Colors */
+--ig-combo-list-focused-item-text-color: var(--primaryTextColor);
+--ig-combo-list-focused-item-background: var(--secondaryBackground);
+--ig-combo-list-focused-item-border-color: transparent;
+
+
+--ig-input-input-suffix-background:var(--secondaryBackground);
+
+
+/* Box Backgrounds */
+--ig-textarea-box-background: var(--tertiaryBackground);
+--ig-textarea-box-background-hover:var(--tertiaryBackground);
+--ig-textarea-box-background-focus: var(--tertiaryBackground);
+--ig-textarea-box-disabled-background: var(--primaryBackground);
+
+ /* Border Radius */
+ --ig-textarea-box-border-radius: 0px;
+ --ig-textarea-border-border-radius: 0px;
+ --ig-textarea-search-border-radius: 0px;
+ 
+}

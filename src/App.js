@@ -4,7 +4,7 @@ import Header from './components/Header';
 import LeftNav from './components/LeftNav';
 import Workspace from './components/Workspace';
 import { applyTheme, fetchThemeSettings } from './themeConfig';
-
+import './custom-igniteui-theme.css';
 
 
 
