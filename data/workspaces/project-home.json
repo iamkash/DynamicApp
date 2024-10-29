@@ -47,7 +47,7 @@
       "colSpan":"col-span-2",
       "colorRotation":true,
       "gadgetOptions": {
-        "title": "Production Forecast (Total)",
+        "title": "Production Forecast",
         "value": "6.5",
         "uom":"MMbbl",
         "icon": "FaChartLine",
