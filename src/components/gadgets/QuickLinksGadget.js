@@ -30,7 +30,7 @@ const QuickLinksGadget = ({ gadget = {} }) => {
             ) : (
               <div className="w-8 h-8" /> // Placeholder if icon not found
             )}
-            <span className="mt-2 text-center">{button.text}</span>
+            <span className="mt-2 text-xs text-center">{button.text}</span>
           </Link>
         );
       })}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa'; // Dynamically load FontAwesome icons
 
 const TileGadget = ({ gadget = {} }) => {
@@ -12,8 +13,8 @@ const TileGadget = ({ gadget = {} }) => {
 
   return (
     <div className="w-full">
-      <Wrapper
-        href={link || '#'}
+      <Link
+        to={link || '#'}
         className="text-white relative block hover:bg-opacity-90 transition-all"
         style={{
           transition: 'background 0.3s ease, transform 0.3s ease',  // Smooth transition for hover and background effects
@@ -24,14 +25,18 @@ const TileGadget = ({ gadget = {} }) => {
             {value}
             {uom && <span className="text-sm font-normal ml-1">{uom}</span>}  {/* Display the unit of measurement next to the value */}
           </h3>
-          <p className='text-xs mt-3'>{title}</p>
+          <p className='text-sm mt-3'>{title}</p>
         </div>
 
         {/* Icon container with hover grow effect when the entire gadget is hovered */}
         <div className="icon absolute top-4 right-4 text-white opacity-25 transform transition-transform duration-300 group-hover:scale-125">
           {IconComponent && <IconComponent className="text-4xl" />}
         </div>
-      </Wrapper>
+      </Link>
+
+    
+
+          
     </div>
   );
 };

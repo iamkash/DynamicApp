@@ -289,7 +289,7 @@ const filterProjects = () => {
     </div>
 
     {/* Create New Project Button */}
-    <button className="flex items-center text-xs justify-center w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">
+    <button className="flex items-center text-xs justify-center w-full py-2 px-4 bg-blue-500 text-white  hover:bg-blue-600">
       <FaPlus className="mr-2" />
       Create a New Project
     </button>
@@ -308,20 +308,20 @@ const filterProjects = () => {
       </button>
 
       {/* Button Group aligned to the right */}
-      <div className="button-group flex space-x-2">
-        <button className="flex items-center text-xs bg-gray-500 text-white px-2 py-1 rounded hover:bg-gray-600">
+      <div className="button-group flex space-x-1">
+        <button className="flex items-center text-xs bg-gray-500 text-white px-2 py-1  hover:bg-gray-600">
           <FaArchive className="mr-2" /> Archive
         </button>
-        <button className="flex items-center text-xs bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">
+        <button className="flex items-center text-xs bg-red-500 text-white px-2 py-1  hover:bg-red-600">
           <FaTrash className="mr-2" /> Delete
         </button>
-        <button className="flex items-center text-xs bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">
+        <button className="flex items-center text-xs bg-yellow-500 text-white px-2 py-1  hover:bg-yellow-600">
           <FaClone className="mr-2" /> Clone
         </button>
-        <button className="flex items-center text-xs bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600">
+        <button className="flex items-center text-xs bg-green-500 text-white px-2 py-1  hover:bg-green-600">
           <FaShareAlt className="mr-2" /> Share
         </button>
-        <button className="flex items-center text-xs bg-teal-500 text-white px-2 py-1 rounded hover:bg-teal-600">
+        <button className="flex items-center text-xs bg-teal-500 text-white px-2 py-1  hover:bg-teal-600">
           <FaCheck className="mr-2" /> Complete
         </button>
       </div>

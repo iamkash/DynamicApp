@@ -3,6 +3,11 @@
 /* Override Ignite UI theme variables */
 :root {
 
+  /* Toggle button background and foreground */
+--ig-combo-toggle-button-background:var(--tertiaryBackground); /* Background color when focused */
+--ig-combo-toggle-button-foreground: var(--primaryTextColor); /* Foreground color when disabled */
+
+
   --toggle-button-background: var(--tertiaryBackground);
   --toggle-button-foreground: var(--primaryTextColor);
 
@@ -72,7 +77,4 @@
  
 }
 
-[part~="toggle-icon"] {
-  background: var(--toggle-button-background) !important;
-  color: var(--toggle-button-foreground);
-}
+

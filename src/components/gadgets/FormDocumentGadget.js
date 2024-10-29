@@ -69,7 +69,7 @@ const FormDocumentGadget = ({ gadget }) => {
   <h2 className="text-xs font-bold mb-2">{section.title}</h2>
   {Array.isArray(section.groups) &&
     section.groups.map((group) => (
-      <div key={group.groupId} className="mb-2 space-y-2 grid grid-cols-12 gap-4">
+      <div key={group.groupId} className=" space-y-2 grid grid-cols-12 gap-1">
         {Array.isArray(group.fields) &&
           group.fields.map((field, index) => {
             const WidgetComponent = getWidgetComponent(field.type);
