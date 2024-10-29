@@ -54,6 +54,15 @@
 --ig-textarea-box-background-focus: var(--tertiaryBackground);
 --ig-textarea-box-disabled-background: var(--primaryBackground);
 
+/* Text Colors */
+--ig-textarea-idle-text-color: var(--primaryTextColor);
+--ig-textarea-filled-text-color: var(--primaryTextColor);
+--ig-textarea-filled-text-hover-color: var(--primaryTextColor);
+--ig-textarea-focused-text-color: var(--primaryTextColor);
+--ig-textarea-disabled-text-color: var(--primaryTextColor);
+--ig-textarea-input-prefix-color--filled: var(--primaryTextColor);
+
+
  /* Border Radius */
  --ig-textarea-box-border-radius: 0px;
  --ig-textarea-border-border-radius: 0px;
