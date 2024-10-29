@@ -5,42 +5,113 @@
   "icon": "FaChartPie",
   "gadgets": [
     {
-      "name": "formGadget1",
-      "title": "User Registration",
+      "name": "formGadget2",
+      "title": "Sample form Elements",
       "icon": "FaUser",
       "height": "100%",
       "colSpan": "col-span-4",
       "gadgetType": "form",
-      "gadgetOptions": {
-        "formElements": [
-        {
-          "type": "input",
-          "label": "Full Name",
-          "name": "fullName",
-          "id": "fullName",
-          "inputType": "text"
-        },
-        {
-          "type": "input",
-          "label": "Email",
-          "name": "email",
-          "id": "email",
-          "inputType": "email"
-        },
-        {
-          "type": "radio",
-          "label": "Gender",
-          "name": "gender",
-          "id": "gender",
-          "options": [
-            { "label": "Male", "value": "male" },
-            { "label": "Female", "value": "female" }
-          ]
-        }
-      ]
-    },
+      "gadgetOptions": 
+      {
+        "fields": [
+          {
+            "type": "textInput",
+            "label": "Full Name",
+            "name": "fullName",
+            "inputType": "text",
+            "required": true,
+            "minLength": 3,
+            "maxLength": 50,
+            "width": "w-1/2"
+          },
+          {
+            "type": "textInput",
+            "label": "Email",
+            "name": "email",
+            "inputType": "email",
+            "required": true,
+            "width": "w-1/2"
+          },
+          {
+            "type": "maskInput",
+            "label": "Phone Number",
+            "name": "phone",
+            "mask": "(###) ###-####",
+            "required": true,
+            "width": "w-1/3"
+          },
+          {
+            "type": "comboBox",
+            "label": "Country",
+            "name": "country",
+            "options": [
+              { "label": "United States", "value": "US" },
+              { "label": "Canada", "value": "CA" },
+              { "label": "United Kingdom", "value": "UK" }
+            ],
+            "required": true,
+            "width": "w-1/2"
+          },
+          {
+            "type": "numeric",
+            "label": "Age",
+            "name": "age",
+            "min": 0,
+            "max": 120,
+            "suffix": "years",
+            "required": true,
+            "width": "w-1/2"
+          },
+          {
+            "type": "dateTimeInput",
+            "label": "Appointment Date",
+            "name": "appointmentDate",
+            "required": true,
+            "width": "w-1/2"
+          },
+          {
+            "type": "radioGroup",
+            "label": "Gender",
+            "name": "gender",
+            "options": [
+              { "label": "Male", "value": "M" },
+              { "label": "Female", "value": "F" },
+              { "label": "Other", "value": "O" }
+            ],
+            "required": true,
+            "width": "w-full"
+          },
+          {
+            "type": "rating",
+            "label": "Service Rating",
+            "name": "serviceRating",
+            "value": 3,
+            "max": 5,
+            "width": "w-1/3"
+          },
+          {
+            "type": "switch",
+            "label": "Subscribe to Newsletter",
+            "name": "subscribe",
+            "checked": false,
+            "width": "w-full"
+          },
+          {
+            "type": "textArea",
+            "label": "Comments",
+            "name": "comments",
+            "required": false,
+            "minLength": 10,
+            "maxLength": 300,
+            "width": "w-full"
+          }
+        ]
+      }
+      ,
       "footer": "Please complete the form"
     },
+
+
     {
       "name": "gridGadget1",
       "title": "User Data",
